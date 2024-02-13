@@ -1,0 +1,58 @@
+<!--bu conponent geliştirilmekte canlıya çekilmedi -->
+<div class="row">
+    <div class="card" style="width: 18rem;float: left; margin: 5px;"
+    *ngFor="let animal of animals;">
+
+
+    <img width="250" height="250" *ngIf="!animal.animalImageFiles.length" src="../../../../../assets/pxfuel.jpg"
+     class="card-img-top" alt="...">
+
+    <img width="250" height="250"  *ngIf="animal.animalImageFiles.length" src="{{baseUrl}}/{{animal.imagePath}}" class="card-img-top" alt="...">
+
+        <div class="card-body">
+          <h5 class="card-title">{{animal.name}}</h5>
+          <p class="card-text">Yaş:{{animal.age}}<br>
+        {{animal.gender}}
+        </p>
+          <a class="btn btn-warning" (click)="addToBasket(animal)">Başvuruda bulun</a>
+        </div>
+      </div>
+     
+</div>
+<!--bu conponent geliştirilmekte canlıya çekilmedi -->
+<div class="row">
+    
+<div class="col-md-3"></div>
+<div class="col-md-6">
+    <nav aria-label="Pagi navigation example">
+        <ul class="pagination">
+        <li class="page-item">
+        
+          <a class="page-link" href=""[routerLink]="['/animals',currentPageNo-1<=0?1:currentPageNo-1]">
+            
+            Sonraki
+          </a>
+        
+        </li>
+
+        <li class="page-item" *ngFor="let  pageNo of pageList;"  routerLinkActive="active">
+        
+          <a class="page-link" href="" [routerLink]="['/animals',pageNo]">
+            
+            {{pageNo}}
+          </a>
+        
+        </li>
+        <li class="page-item">
+
+
+          <a class="page-link" href="" [routerLink]="['/animals',currentPageNo + 1 >=totalPageCount ?totalPageCount: currentPageNo+1]">Önceki</a>
+         
+
+        </li>
+        </ul>
+        </nav>
+</div>
+<div class="col-md-3"></div>
+
+</div>

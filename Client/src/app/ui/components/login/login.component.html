@@ -1,0 +1,52 @@
+<div class="row"> 
+       
+<div class="card" style=" margin: auto; margin-top: 100px;width: 550px;
+padding: 48px;
+border: 1px solid #dedede;
+border-radius: 0;" >
+  <h3 class="login-title">Giriş yap</h3>
+  <div class="card-body">
+
+      <div class="mb-3">
+          <label for="username" class="form-label">Kullanıcı adı</label>
+          <input #txtUsernameOrEmail type="text" formControlName="username" class="form-control" id="username"  placeholder="ad soyad/Email">
+
+          <!-- <small id="emailHelp" class="form-text">***</small> -->
+        </div> 
+
+      <div class="mb-3">
+          <label for="password" class="form-label">Şifre </label>
+          <input #txtPassword type="password" formControlName="password" class="form-control" placeholder="Şifre" id="password">
+        </div> <a routerLink="/password-reset" style="padding-left: 50;">Şifre unuttum</a>
+
+        
+        <br>  
+        <button type="submit" class="btn btn-primary" id="s" (click)="login(txtUsernameOrEmail.value,txtPassword.value)" >Giriş yap</button>
+        <div class="text-center mb-3">
+          <a href="register">Hesap Aç</a> 
+        </div>
+       
+        
+          <br>
+          <div class="text-center mb-3">
+
+            <button type="button" class="btn-google" onclick="googleLogin()">
+            <i class="fab fa-google google-icon"></i>Google ile Giriş Yap
+          </button>
+          <br>
+          <br>
+
+            <button type="button" class="btn-google" onclick="appleLogin()">
+              <i class="fab fa-apple apple-login-logo-new" ></i>Apple ile giriş yap
+            </button>
+         
+        </div>
+        <div class="text-center mt-3">
+          <span>QR kod ile mobil uygulamadan giriş yap</span>
+        </div>
+      <!-- <asl-google-signin-button></asl-google-signin-button> -->
+
+  </div>
+</div>
+ 
+</div>

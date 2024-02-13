@@ -1,0 +1,33 @@
+<mat-form-field appearance="fill" class="animals-criate">
+  <mat-label>İsmi</mat-label>
+  <input matInput #txtName>
+</mat-form-field>
+
+<mat-form-field appearance="fill"  class="animals-criate">
+  <mat-label>Türü</mat-label>
+  <input matInput #txtType>
+</mat-form-field>
+
+<mat-form-field appearance="fill"   class="animals-criate">
+  <mat-label>Yaş</mat-label>
+  <input matInput #txtAge type="number" min="0" value="0">
+</mat-form-field>
+
+<mat-form-field appearance="fill"  class="animals-criate">
+  <mat-label>Cinsiyet</mat-label>
+  <input matInput #txtGender>
+</mat-form-field>
+
+<mat-form-field appearance="fill"  class="animals-criate">
+  <mat-label>Aşı</mat-label>
+  <input matInput #txtVaccination>
+</mat-form-field>
+
+
+ 
+
+
+<button mat-raised-button color="primary" (click)="create(txtVaccination,txtGender,txtAge,txtType,txtName)" class="btn" style="width: 150px; margin-left: 40px;">Ekle</button>
+
+ <hr/>
+ <app-file-uploat [options]="fileUploadOptions"></app-file-uploat>

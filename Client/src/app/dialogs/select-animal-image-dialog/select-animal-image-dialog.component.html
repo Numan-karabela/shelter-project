@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>Animal Images</h2>
+<mat-dialog-content class="mat-typography">
+
+<app-file-uploat [options]="options"></app-file-uploat>
+
+
+
+<mat-card class="animal-image-card"   *ngFor="let image of images">
+<mat-card-header> 
+<input type="radio" name="img" (click)="showCase(image.id)">
+</mat-card-header>
+<img mat-card-image style="width: 250px; height: 250px;"  [src]="image.Path">
+<mat-card-content>
+ 
+</mat-card-content>
+
+<mat-card-actions>
+<button mat-button style="background-color: chocolate; color: aliceblue;"(click)="deleteImage(image.id, $event)">Delete</button> 
+</mat-card-actions>
+</mat-card>
+
+
+
+
+
+
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+<button mat-button mat-dialog-close>Cancel</button>
+
+</mat-dialog-actions>

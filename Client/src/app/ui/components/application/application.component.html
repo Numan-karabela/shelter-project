@@ -1,0 +1,68 @@
+<!--bu conponent geliştirilmekte canlıya çekilmedi -->
+<div class="modal-dialog modal-xl"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Başvuru</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         
+            
+
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ismi</th>
+                    <th scope="col">Yaşı</th>
+                  
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                   <tr class="{{basketItem.basketItemId}}" *ngFor="let basketItem of basketItems;let i=index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{basketItem.name}}</td>
+                    <td>{{basketItem.age}}</td>
+                    <td>
+                        <input type="number" [value]="basketItem.quantity" style="width: 60px;">
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-danger" (click)="removeBasketItem(basketItem.basketItemId)">X</button>
+
+                    </td>
+                  </tr>  
+               
+         
+                  <!-- <tr >
+                    <th >1</th>
+                    <td>hayvan1</td>
+                    <td>6</td> 
+                    <td>
+                      <button type="button" class="btn btn-danger">X</button> 
+                    </td>
+                  </tr>
+                  <tr >
+                    <th >2</th>
+                    <td>hayvan2</td>
+                    <td>6</td> 
+                    <td>
+                      <button type="button" class="btn btn-danger">X</button> 
+                    </td>
+                  </tr>   
+                    -->
+
+                </tbody>
+              </table>
+
+
+ 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-warning" (click)="shoppingComplete()">Başvurunu tamamla
+          </button>
+        </div>
+      </div>
+<!--bu conponent geliştirilmekte canlıya çekilmedi -->

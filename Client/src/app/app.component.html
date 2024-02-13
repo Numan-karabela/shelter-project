@@ -1,0 +1,133 @@
+ 
+ <div style="background-color:f8f1f1;">
+  <nav class="navbar navbar-expand-lg" style="background-color:#f8f1f1;">
+    <div class="container-fluid" style="background-color: #f8f1f1;">
+         <div style=" margin-left: 70px;"><a href="">
+     <img src="../../../../assets/logo_black.png" style="width: auto;height:40px;margin-left: 10px;" alt="">
+    </a> 
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="map-icon" href="#">
+        <img src="../assets/../assets/Ekran görüntüsü 2023-12-25 124055.png"  style="width: auto; height: 35px;" alt="Map Icon">
+      </a></div> 
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 10px;"> 
+        <form action="#" class="subscribe-form" style="width: 400px; height: 30px;">
+          <div class="form-group d-flex">
+            <input type="text" class="form-control rounded-left" placeholder="" style="height: 35px;">
+            <input type="submit"  value="" class="  submit px-3 rounded-right" style="width: 40px;height: 35px;background-image:url(../assets/dog\ \(1\).png);background-repeat: round;"  >
+          </div>
+        </form>
+        
+      
+       
+        
+      </div>
+  
+      <div style="margin-right: 20px;"> 
+      <div class="collapse navbar-collapse" id="navbarNav"  style="float: inline-start;">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"routerLink="login" *ngIf="!authService.isAuthenticated" style="color: black;" >Giriş Yap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" style="color: red; cursor: pointer;" (click)="sigOut()" *ngIf="authService.isAuthenticated">Çıkış yap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"routerLink="register" *ngIf="!authService.isAuthenticated"  style="color: black;">Kayıt ol</a> 
+          </li> 
+        </ul>
+      </div>
+    
+      <a class="btn btn-outline-success" type="submit" routerLink="admin" *ngIf="authService.isAuthenticated">Yönetim Paneli</a> 
+   
+  
+      
+      <button class="btn" type="submit" style="float: inline-start; border: 1px solid #000000;"><img src="../assets/kitty.png" style="width: 25px; height: 25px;">  İlan ver</button>
+    </div> 
+    </div>
+  </nav>
+</div>
+     
+  
+  <ngx-spinner size="default" name="s1" type="ball-atom"></ngx-spinner>
+  <ngx-spinner size="default" name="s2" type="ball-scale-multiple"></ngx-spinner> 
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+  <ng-template appDynamicLoadComponent></ng-template>
+  </div>
+  </div>
+   
+  
+  <router-outlet></router-outlet>
+   
+<footer class="footer-03" style="margin-top: 10px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4 mb-md-0 mb-4">
+            <h2 class="footer-heading">Men</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-1 d-block">Jeans</a></li>
+              <li><a href="#" class="py-1 d-block">Jumpers</a></li>
+              <li><a href="#" class="py-1 d-block">Leather</a></li>
+              <li><a href="#" class="py-1 d-block">Shorts</a></li>
+              <li><a href="#" class="py-1 d-block">Boots</a></li>
+              <li><a href="#" class="py-1 d-block">Watches</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <h2 class="footer-heading">Women</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-1 d-block">Dresses</a></li>
+              <li><a href="#" class="py-1 d-block">Jumpsuits</a></li>
+              <li><a href="#" class="py-1 d-block">Shirts</a></li>
+              <li><a href="#" class="py-1 d-block">T-shirts</a></li>
+              <li><a href="#" class="py-1 d-block">Swearshirts</a></li>
+              <li><a href="#" class="py-1 d-block">Jackets</a></li>
+              <li><a href="#" class="py-1 d-block">Coats</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <h2 class="footer-heading">Kids</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-1 d-block">Shirts</a></li>
+              <li><a href="#" class="py-1 d-block">T-shirts</a></li>
+              <li><a href="#" class="py-1 d-block">Polos</a></li>
+              <li><a href="#" class="py-1 d-block">Sweaters</a></li>
+              <li><a href="#" class="py-1 d-block">Sweatshirts</a></li>
+              <li><a href="#" class="py-1 d-block">Jackets</a></li>
+              <li><a href="#" class="py-1 d-block">Watches</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row justify-content-end">
+          <div class="col-md-12 col-lg-11 mb-md-0 mb-4">
+            <h2 class="footer-heading">Follow Us</h2>
+            <ul class="ftco-footer-social p-0">
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="ion-logo-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="ion-logo-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="ion-logo-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><span class="ion-logo-linkedin"></span></a></li>
+            </ul>
+            <h2 class="footer-heading mt-5">Subscribe Us</h2>
+            <form action="#" class="subscribe-form">
+              <div class="form-group d-flex">
+                <input type="text" class="form-control rounded-left" placeholder="Enter email address">
+                <input type="submit" value="Subscribe" class="form-control submit px-3 rounded-right">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+  </div>
+</footer>
+
+ 
