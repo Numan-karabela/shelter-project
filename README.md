@@ -15,21 +15,35 @@ Onion Architecture
 Generic Repository Design Pattern
 
 EF Core Tracking
+
 CQRS
+
 Custom HttpClient
+
 FluentValidation
+
 Dosya Yükleme Mekanizması
+
 Kullanıcı Kayıt, Authentication ve JWT
+
 Guard
+
 Google Login ve Facebook Login
+
 Serilog ile Loglama ve Seq
+
 Global Exception Handler
+
 SignalR
+
 Reset Password
+
 Nasıl Başlayabilirim?
+
 Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
+
+
  
-Umarım bu örnek README sizin için yararlı olur!
 
 
 
