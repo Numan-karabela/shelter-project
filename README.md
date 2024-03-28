@@ -5,10 +5,15 @@ Bu projem, sahipsiz hayvanları online sahiplenmeye yönlendiren bir sosyal soru
 Onion Architecture tasarım deseni kullanılarak modüler ve SOLID yazılım prensiplerine bağlı kalarak .Net Core ve Angular ile geliştirildi.
 
 Kullanılan Teknolojiler ve Yapılar
+
 .NET Core
+
 Angular
+
 Onion Architecture
+
 Generic Repository Design Pattern
+
 EF Core Tracking
 CQRS
 Custom HttpClient
